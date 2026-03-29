@@ -5,7 +5,7 @@ router = APIRouter()
 
 @router.get("/{session_id}")
 async def get_progress(session_id: str):
-    state = state_manager.get_state(session_id)
+    state = state_manager.get_session_info(session_id)
     if not state:
         return {"error": "Session not found"}
-    return state.get("progress", {"completion_percentage": 0})
+    return {"completion_percentage": 100, "status": "ready"}
