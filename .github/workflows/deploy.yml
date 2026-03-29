@@ -27,7 +27,7 @@ jobs:
       - name: Build React App
         working-directory: ./frontend
         env:
-          REACT_APP_API_URL: https://data-assistant-backend.onrender.com/api
+          REACT_APP_API_URL: https://dataanalytics-ai.onrender.com/api
         run: npm run build
 
       - name: Deploy to GitHub Pages
